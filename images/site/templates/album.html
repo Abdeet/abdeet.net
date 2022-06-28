@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %} {% block title %} {{ json_file["album"]["title"] }} {% endblock %} {% endblock %}
+{% block url %} {{ 'images.abdeet.net'~url_for('album', album_id=album_id) }} {% endblock %}
+{% block description %} {{ json_file["album"]["description"] }} {% endblock %} 
+{% block image %} {{ 'https://images.abdeet.net'~url_for('static', filename='albums/'~album_id~"/"~random_image(album_id)) }} {% endblock %}
+
+{% block content %}   
+    <p>Date: {{ json_file["album"]["date"] }}</p>
+    <p>Location: {{ json_file["album"]["location"] }}</p>
+    <p>{{ json_file["album"]["description"] }}</p>
+    <br>
+    {% for image in json_file["images"] %}
+    <p><b>{{ image['title'] }}</b></p>
+    <a href="{{ url_for('image', album_id=album_id, image_id=remove_extension(image['filename'])) }}"><img src="{{ url_for('static', filename='albums/'~album_id~'/'~image['filename']) }}" height="300"></a>
+    <br>
+    {% endfor %}
+{% endblock %} 

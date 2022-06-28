@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	 <head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<!-- project stylesheet link -->
+		<link href="styles.css" rel="stylesheet">
+		
+		<title>PHP Word Game</title>
+		<style>
+			form{
+				padding-top: 15px;
+				max-width: 450px;
+				min-height: 350px;
+			}
+			
+			.cantonese{
+				font-family: 'Noto Sans HK', 'sans-serif';
+			}
+			
+			.guess-word{
+				font-size: 50px;
+				font-family: 'Kanit', sans-serif;
+			}
+			
+			.hindi{
+				font-family: 'Poppins', sans-serif;
+			}
+			
+			.tamil{
+				font-family: 'Catamaran', sans-serif;
+			}
+			
+			.greek{
+				font-family: 'Source Code Pro', monospace;
+			}
+			
+			.arabic{
+				font-family: 'Qahiri', sans-serif;
+			}
+			
+			.math{
+				font-family: 'Roboto Mono', monospace;
+			}
+			
+		</style>	
+	</head>
+	<body class="bg-dark">
+		<div class="container bg-secondary p-0">
+			<form class="text-light mx-auto" method="get" action="" autocomplete="off">
+				<div class="mb-3 text-center">
+					<h2 class="mx-auto pb-2 cantonese">文字游戏</h2>
+					<h1 id="scrambled" class="mx-auto pb-2 guess-word">CRAMBLEDS</h1>
+					<label class="mx-auto mb-3 hindi" for="guess-field">एक अनुमान करना</label>
+					<input name="guess" class="form-control mx-auto text-center tamil" id="guess-field" placeholder="உங்கள் யூகம்">
+					<button id="submit-button" type="submit" class="btn btn-primary mx-auto mt-3 mb-2 greek">αναγράφω</button>
+					<h3 class="mx-auto" id="output-place"></h3>
+				</div>		
+			</form>
+		</div>
+		<div class="container bg-secondary mt-5 text-light pl-5 pt-2 pb-1" id="statistics">
+			<h2 class="mx-auto text-light text-center arabic">الإحصاء</h2>
+			<p class="math" id="stats-total-words">Total Words: 0</p>
+			<p class="math" id="stats-proportion-words-correct">% Words Correct: 0</p>
+			<p class="math" id="stats-total-guesses">Total Guesses: 0</p>
+			<p class="math" id="stats-proportion-guesses-correct">% Guesses Correct: 0</p>
+			<p class="math" id="stats-mean-guesses-on-correct-words">Mean Guesses on Correct Words: 0</p>
+			<p class="math" id="stats-mean-guesses-on-incorrect-words">Mean Guesses on Incorrect Words: 0</p>
+			<p class="math" id="stats-mean-letters-in-correct-words">Mean Letters in Correct Words: 0</p>
+			<p class="math" id="stats-mean-letters-in-incorrect-words">Mean Letters in Incorrect Words: 0</p>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="scripts.js"></script>
+		
+		<script>
+			playGame();
+		</script>
+	</body>
+</html>

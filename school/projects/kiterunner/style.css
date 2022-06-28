@@ -1,0 +1,87 @@
+/*By Abhi Senthilkumar*/
+
+body{
+    background: #141414;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h1{
+    color: #EBEBEB;
+    font-family: 'Akaya Kanadaka', cursive;
+    text-align: center;
+    font-size: 60px;
+}
+
+h2{
+    color: #F8F525;
+    margin-top: -5px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 30px;
+}
+
+h3{
+    color: #93F1C3;
+    font-family: 'Glory', sans-serif;
+    font-size: 24px;
+}
+
+p{
+    color: #BFD7EA;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+}
+
+q{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left-content p, .left-content h2, .left-content h3{
+    padding-right: 40px;
+}
+
+.right-content p, .right-content h2, .right-content h3{
+    padding-left: 40px;
+}
+
+img{
+    float: false;
+    width: 100%;
+}
+
+.song-package{
+    width: 80%y;
+    margin-bottom: 50px;
+    float: left;
+}
+
+.song-description{
+    margin-top: 20px;
+    width: 70%;
+}
+
+.album-art{
+    margin-top: 20px;
+    width: 30%;
+}
+
+.left-content{
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+    float: left;
+}
+
+.right-content{
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    float: right;
+}
+
+#playlist{   
+    text-align: center;
+    width: 80%;
+    padding-left: 6%;
+    padding-top: 150px;
+}

@@ -1,0 +1,343 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: grey;
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.flag{
+	background: white;
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+
+.r3-5{
+	width: 500px;
+	height: 300px;
+}
+
+.r2-3{
+	width: 450px;
+	height: 300px;
+}
+
+.r4-5{
+	width: 375px;
+	height: 300px;
+}
+
+.r5-8{
+	width: 480px;
+	height: 300px;
+}
+
+
+.circle{
+	border-radius: 100%;
+}
+	
+.stripe{
+	width: 100%;
+	height: 100%;
+}
+
+.horizontal-triband .stripe{
+	width: 100%;
+	height: 33.33%;
+}
+
+.vertical-triband .stripe{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+}
+
+.horizontal-biband .stripe{
+	width: 100%;
+	height: 50%;
+}
+
+.horizontal-3-7{
+	width: 100%;
+	height: 42.86%;
+}
+
+.horizontal-1-7{
+	width: 100%;
+	height: 14.29%;
+}
+
+.vertical-1-9{
+	width: 11.11%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-3-9{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-5-9{
+	width: 55.55%;
+	height: 100%;
+	float: left;
+}
+
+.horizontal-2-5{
+	width: 100%;
+	height: 40%;
+}
+
+.horizontal-1-5{
+	width: 100%;
+	height: 20%;
+}
+
+.vertical-3-5{
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-2-5{
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-1-5{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-13-30{
+	width: 43.33%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-4-30{
+	width: 13.33%;
+	height: 100%;
+	float: left;
+}
+
+.horizontal-7-13{
+	width: 100%;
+	height: 53.846153846%;
+}
+
+.horizontal-1-13{
+	width: 100%;
+	height: 7.692307692%;
+}
+
+.horizontal-1-9{
+	width: 100%;
+	height: 11.11%;
+}
+
+.vertical-1-13{
+	width: 7.69%;
+	height: 100%;
+	float: left;
+}
+
+.horizontal-1-11{
+	width: 100%;
+	height: 9.09%;
+}
+
+.vertical-3-35{
+	width: 8.57%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-1-35{
+	width: 2.86%;
+	height: 100%;
+	float: left;
+}
+
+.horizontal-3-29{
+	width: 100%;
+	height: 10.34%;
+}
+
+.horizontal-1-29{
+	width: 100%;
+	height: 3.45%;
+}
+
+.vertical-10-27{
+	width: 37.04%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-17-27{
+	width: 62.96%;
+	height: 100%;
+	float: left;
+}
+
+.horizontal-5-9{
+	width: 100%;
+	height: 55.55%;
+}
+
+.vertical-5-16{
+	width: 31.25%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-2-16{
+	width: 12.5%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-9-16{
+	width: 56.25%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-5-54{
+	width: 9.26%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-14-54{
+	width: 25.93%;
+	height: 100%;
+	float: left;
+}
+
+.vertical-7-54{
+	width: 12.96%;
+	height: 100%;
+	float: left;
+}
+
+.horizontal-1-2{
+	width: 100%;
+	height: 50%;
+}
+
+.horizontal-106-144{
+	width: 100%;
+	height: 73.61%;
+}
+
+.horizontal-19-144{
+	width: 100%;
+	height: 13.19%;
+}
+
+#singapore-invisible-circle{
+	position: relative;
+	left: -75%;
+}
+
+.singapore-star{
+	height: 23%;
+	position: relative;
+}
+
+#singapore-star-1{
+	top: 8%;
+	left: 3%;
+}
+
+#singapore-star-2{
+	top: 3%;
+	left: -22%;
+}
+
+#singapore-star-3{
+	top: 13%;
+	left: -12%;
+}
+
+#singapore-star-4{
+	top: -10%;
+	left: 18%;
+}
+
+#singapore-star-5{
+	top: -65%;
+	left: 28%;
+}	
+
+
+	
+/*Russia Flag Colors*/
+.russia-white{background: #FFFFFF}
+.russia-blue{background: #0032A0}
+.russia-red{background: #DA291C}
+
+/*Germany Flag Colors*/
+.germany-black{background: #000000}
+.germany-red{background: #FF0000}
+.germany-yellow{background: #FFCC00}
+
+/*Netherlands Flag Colors*/
+.netherlands-red{background: #AE1C28}
+.netherlands-white{background: #FFFFFF}
+.netherlands-blue{background: #21468B}
+
+/*France Flag Colors*/
+.france-blue{background: #0055A4}
+.france-white{background: #FFFFFF}
+.france-red{background: #EF4135}
+
+/*Ukraine Flag Colors*/
+.ukraine-blue{background: #0057B7}
+.ukraine-yellow{background: #FFD700}
+
+/*Denmark Flag Colors*/
+.denmark-red{background: #C60C30}
+.denmark-white{background: #FFFFFF}
+
+/*Bornholm Flag Colors*/
+.bornholm-red{background: #E20202}
+.bornholm-green{background: #1B8E38}
+
+/*Dominican Republic Flag Colors*/
+.dominican-republic-blue{background: #002D62}
+.dominican-republic-white{background: #FFFFFF}
+.dominican-republic-red{background: #CE1126}
+
+/*United States Flag Colors*/
+.united-states-blue{background: #0A3161}
+.united-states-red{background: #B31942}
+.united-states-white{background: #FFFFFF}
+
+/*Greece Flag Colors*/
+.greece-blue{background: #004C98}
+.greece-white{background: #FFFFFF}
+
+/*Sweden Flag Colors*/
+.sweden-blue{background: #004B87}
+.sweden-yellow{background: #FFCD00}
+			
+/*Singapore Flag Colors*/
+.singapore-red{background: #EF3340}
+.singapore-white{background: #FFFFFF}

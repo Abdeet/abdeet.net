@@ -1,0 +1,39 @@
+:root {
+	--main-bg-color: #CEEBAD;
+	--main-p-color: #012A36;
+	--main-h1-color: #363732;
+	--main-a-link-color: #6A80E0;
+	--main-a-visited-color: #23B5D3;
+	--main-a-hover-color: #107F61;
+}
+
+
+body {
+	background-color: var(--main-bg-color);
+	cursor: progress;
+}
+
+
+h1 {
+	color: var(--main-h1-color);
+}
+
+p {
+	color: var(--main-p-color);
+	font-family: "Comic Sans MS", "Comic Sans", sans-serif; 
+}
+
+/*Links*/
+
+a:link {
+	color: var(--main-a-link-color);
+}
+
+a:visited {
+	color: var(--main-a-visited-color);
+}
+
+a:hover {
+	color: var(--main-a-hover-color);
+	cursor: progress;
+}

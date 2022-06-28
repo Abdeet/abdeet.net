@@ -1,0 +1,42 @@
+#main-div{
+	height: 100vh !important;
+}
+
+p {
+	font-family: 'Comic Sans MS', 'cursive';
+}
+
+h1{
+	font-family: 'Rockwell', 'serif';
+	text-align: center;
+	font-size: 70px !important;
+	margin: 0 !important;
+}
+
+ul {
+	/*font-family: 'Wingdings', 'Wingdings 2', 'Wingdings 3', 'Calibri';*/
+}
+
+.abhi-carousel-text-background{
+	background: rgba(255, 255, 255, 0.7);
+	text-shadow: 1px 1px #AAAAAA;
+	border-radius: 50px;
+}
+
+#header-div{
+	margin: none;
+}
+
+#footer-div{
+	position: relative;
+	bottom: 0;
+}
+
+.carousel-item {
+	height: 600px;
+	overflow: hidden;
+	width: 100%;
+}
+.carousel-item img {
+	width: 100%;
+}

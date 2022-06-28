@@ -1,0 +1,60 @@
+body{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+
+.newspaper-title{
+	font-family: 'Cinzel Decorative', serif;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.newspaper-motto{
+	font-family: 'Old Standard TT', serif;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.newspaper-date{
+	font-family: 'Old Standard TT', serif;
+	text-align: right;
+	margin-top: 0px;
+}
+
+.main-article-heading{
+	font-family: 'Merriweather', serif;
+	font-size: 70px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.main-article-subheading{
+	font-family: 'Old Standard TT', serif;	
+	text-align: center;
+	margin-top: 0px;
+}
+
+.article-text{
+	font-family: 'Old Standard TT', serif;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.img-center{
+	text-align: center;
+	margin: auto;
+}
+
+img{
+	width: 50%;
+}
+
+.footing{
+	position: fixed;
+	bottom: 0px;
+}
