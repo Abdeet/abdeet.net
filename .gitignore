@@ -19,6 +19,8 @@ htmlcov/
 
 /images/images.log
 
+/images/images.wsgi
+
 #music
 
 #school
