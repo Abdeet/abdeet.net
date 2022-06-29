@@ -85,6 +85,6 @@ def create_app(test_config=None):
     def image(album_id, image_id):
         with open(os.path.join(app.static_folder, f"albums/{album_id}/album.json"), "r") as file:
             json_file = json.load(file)
-        return render_template('image.html', album_id = album_id, image_id = image_id, album_json = json_file['album'], image_json = get_image(json_file, image_id)) 
+        return render_template('image.html', album_id = album_id, image_id = image_id, album_json = json_file['album'], image_json = get_image(json_file, image_id), get_thumbnail = get_thumbnail) 
     
     return app
