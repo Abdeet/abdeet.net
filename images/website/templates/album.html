@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ json_file["album"]["title"] }} {% endblock %}
+{% block url %} {{ 'images.abdeet.net'~url_for('album', album_id=album_id) }} {% endblock %}
+{% block description %} {{ json_file["album"]["description"] }} {% endblock %} 
+{% block image %} {{ 'https://images.abdeet.net'~url_for('static', filename='albums/'~album_id~"/"~random_image(album_id, True)) }} {% endblock %}
+
+{% block content %}  
+    <div class="description">
+        <h1>{{ json_file["album"]["title"] }}</h1>
+        <p><b>Date: </b>{{ json_file["album"]["date"] }}</p>
+        <p><b>Location: </b>{{ json_file["album"]["location"] }}</p>
+        <p>{{ json_file["album"]["description"] }}</p>
+    </div>
+    <br>
+    <div class="image-group">
+        {% for image in json_file["images"] %}
+        <div class="single-image {% if loop.index %2 == 0 %} secondary-background {% endif %}">
+            <a class="no-underline" href="{{ url_for('image', album_id=album_id, image_id=remove_extension(image['filename'])) }}">
+                <img src="{{ url_for('static', filename='albums/'~album_id~'/thumbnails/'~get_thumbnail(album_id, image['filename'])) }}" height="300">
+                <p><b>{{ image['title'] }}</b></p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %} 

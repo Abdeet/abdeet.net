@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} images.abdeet.net {% endblock %}
+
+{% block url %} {{ 'images.abdeet.net'~url_for('home')}} {% endblock %}
+{% block description %} images.abdeet.net is Abdeet's photo repository, containing many pictures that he has taken. {% endblock %} 
+{% block image %} {{ 'https://images.abdeet.net'~url_for('static', filename='albums/'~random_image(albums, True, True))}} {% endblock %}
+
+{% block content %}
+    <h1>Welcome to Abdeet's photo repository.</h1>
+    <br>
+    <h2>List of albums</h2>
+    <br>
+    <div class="image-group">
+        {% for album in albums %}
+        <div class="single-image {% if loop.index %2 == 0 %} secondary-background {% endif %}">
+            <a class="no-underline" href="{{ url_for('album', album_id=album['filename']) }}">
+                <img src="{{ url_for('static', filename='albums/'~album['filename']~'/thumbnails/'~random_image(album['filename'], True)) }}" height="300">
+                <p><b>{{ album['title'] }}</b></p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %} 
