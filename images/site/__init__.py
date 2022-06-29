@@ -55,8 +55,8 @@ def create_app(test_config=None):
         image_ext = os.path.splitext(image_filename)[1]
         image = Image.open(os.path.join(path_to_full_size, image_filename))
         full_width, full_height = image.size
-        new_width, new_height = 300 * full_width / full_height, 300
-        thumbnail = image.resize((round(new_width), new_height))
+        new_width, new_height = round(500 * full_width / full_height), 500
+        thumbnail = image.resize((new_width, new_height))
         thumbnail.save(os.path.join(path_to_thumbnails, f"{image_name}_thumbnail{image_ext}"))
 
     def get_thumbnail(album_id, image_filename):
