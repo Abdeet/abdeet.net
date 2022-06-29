@@ -13,7 +13,7 @@
         <li>
             <a href="{{ url_for('album', album_id=album_id) }}"">
                 <p>{{ get_json(album_id)["album"]["title"] }}</p>
-                <img src="{{ url_for('static', filename='albums/'~album_id~'/'~random_image(album_id)) }}" height="300">
+                <img src="{{ url_for('static', filename='albums/'~album_id~'/thumbnails/'~get_thumbnail(album_id, random_image(album_id))) }}" height="300">
             </a>
         </li>
         {% endfor %}

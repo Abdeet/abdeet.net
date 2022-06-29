@@ -12,7 +12,7 @@
     <br>
     {% for image in json_file["images"] %}
     <p><b>{{ image['title'] }}</b></p>
-    <a href="{{ url_for('image', album_id=album_id, image_id=remove_extension(image['filename'])) }}"><img src="{{ url_for('static', filename='albums/'~album_id~'/'~image['filename']) }}" height="300"></a>
+    <a href="{{ url_for('image', album_id=album_id, image_id=remove_extension(image['filename'])) }}"><img src="{{ url_for('static', filename='albums/'~album_id~'/thumbnails/'~get_thumbnail(album_id, image['filename'])) }}" height="300"></a>
     <br>
     {% endfor %}
 {% endblock %} 
