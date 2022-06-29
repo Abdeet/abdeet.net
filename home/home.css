@@ -1,7 +1,9 @@
 :root {
 	--main-bg-color: #CEEBAD;
-	--main-p-color: #012A36;
-	--main-h1-color: #363732;
+	--secondary-bg-color: #adda7b;
+	--main-p-color: #223d4d;
+	--main-h1-color: #000000;
+	--main-h2-color: #571b1b;
 	--main-a-link-color: #6A80E0;
 	--main-a-visited-color: #23B5D3;
 	--main-a-hover-color: #107F61;

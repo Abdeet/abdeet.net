@@ -1,44 +1,51 @@
 :root {
 	--main-bg-color: #CFEDF2;
 	--secondary-bg-color: #8dc7d1;
-	--main-p-color: #012A36;
-	--main-h-color: #363732;
+	--main-p-color: #006144;
+	--main-p-font: 1em "Comic Sans MS", "Comic Sans", sans-serif;
+	--main-footer-font: 1em "Comic Sans MS", "Comic Sans", sans-serif;
+	--main-h1-color: #000000;
+	--main-h1-font: 2.25em "Times New Roman", serif;
+	--main-h2-color: #571b1b;
+	--main-h2-font: 1.75em "Times New Roman", serif;
 	--main-a-link-color: #6A80E0;
 	--main-a-visited-color: #23B5D3;
 	--main-a-hover-color: #107F61;
 }
 
-
 body {
+	width: 90%;
+	margin: auto;
 	background-color: var(--main-bg-color);
 }
 
 
 h1 {
-	color: var(--main-h-color);
+	color: var(--main-h1-color);
+	font: var(--main-h1-font);
 	margin: auto;
 	text-align: center;
 }
 
 h2 {
-	color: var(--main-h-color);
+	color: var(--main-h2-color);
+	font: var(--main-h2-font);
 	margin: auto;
 	text-align: center;
 }
 
 p {
 	color: var(--main-p-color);
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font: var(--main-p-font);
 }
 
 .content{
 	margin: auto;
-	width: 90%;
 }
 
 .description{
 	margin: auto;
-	width: 60%;
+	width: 70%;
 }
 
 .image-group {
@@ -57,9 +64,11 @@ p {
 }
 
 footer{
+	color: var(--main-p-color);
+	font: var(--main-footer-font);
 	margin: auto;
 	text-align: center;
-	width: 90%;
+	width: 70%;
 }
 
 /*Links*/

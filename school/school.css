@@ -1,10 +1,15 @@
 :root {
         --main-bg-color: #BFB8CC;
-        --main-p-color: #012A36;
-        --main-h1-color: #363732;
-        --main-a-link-color: #6A80E0;
-        --main-a-visited-color: #23B5D3;
-        --main-a-hover-color: #107F61;
+        --main-p-color: #006144;
+	--main-p-font: 1em "Comic Sans MS", "Comic Sans", sans-serif;
+	--main-footer-font: 1em "Comic Sans MS", "Comic Sans", sans-serif;
+	--main-h1-color: #000000;
+	--main-h1-font: 2.25em "Times New Roman", serif;
+	--main-h2-color: #571b1b;
+	--main-h2-font: 1.75em "Times New Roman", serif;
+	--main-a-link-color: #6A80E0;
+	--main-a-visited-color: #23B5D3;
+	--main-a-hover-color: #107F61;
 }
 
 
