@@ -1,7 +1,7 @@
 import os
 import json
 import random
-#from PIL import Image
+from PIL import Image
 
 from flask import Flask, render_template, url_for
 
@@ -51,7 +51,6 @@ def create_app(test_config=None):
     def create_thumbnail(album_id, image_filename):
         path_to_full_size = os.path.join(app.static_folder, f"albums/{album_id}")
         path_to_thumbnails = os.path.join(app.static_folder, f"albums/{album_id}/thumbnails")
-        image_name, image_ext = os.path.splitext(image_filename)[0], os.path.splitext(image)[1]
         image = Image.open(os.path.join(path_to_full_size, image_filename))
         full_width, full_height = image.size
         new_width, new_height = 500 * full_width / full_height, 500
@@ -60,6 +59,7 @@ def create_app(test_config=None):
 
     def get_thumbnail(album_id, image_filename):
         path_to_thumbnails = os.path.join(app.static_folder, f"albums/{album_id}/thumbnails")
+        image_name, image_ext = os.path.splitext(image_filename)[0], os.path.splitext(image)[1]
         if not os.path.exists(path_to_thumbnails):
             os.makedirs(path_to_thumbnails)
         if not os.path.exists(os.path.join(path_to_thumbnails, f"{image_name}_thumbnail{image_ext}")):
