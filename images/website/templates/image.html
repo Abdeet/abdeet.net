@@ -6,6 +6,7 @@
 {% block image %} {{ 'https://images.abdeet.net'~url_for('static', filename='albums/'~album_id~'/thumbnails/'~get_thumbnail(album_id, image_json['filename'])) }} {% endblock %}
 
 {% block content %}
+    <br>
     <h1>{{ image_json['title'] }}</h1>
     <div class="description">
         <p>{{ image_json["description"] }}</p>
