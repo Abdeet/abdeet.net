@@ -1,7 +1,7 @@
 import os
 import json
 import random
-from PIL import Image
+#from PIL import Image
 
 from flask import Flask, render_template, url_for
 
