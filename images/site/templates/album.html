@@ -3,7 +3,7 @@
 {% block header %} {% block title %} {{ json_file["album"]["title"] }} {% endblock %} {% endblock %}
 {% block url %} {{ 'images.abdeet.net'~url_for('album', album_id=album_id) }} {% endblock %}
 {% block description %} {{ json_file["album"]["description"] }} {% endblock %} 
-{% block image %} {{ 'https://images.abdeet.net'~url_for('static', filename='albums/'~album_id~"/"~random_image(album_id)) }} {% endblock %}
+{% block image %} {{ 'https://images.abdeet.net'~url_for('static', filename='albums/'~album_id~"/"~random_image(album_id, True)) }} {% endblock %}
 
 {% block content %}   
     <p>Date: {{ json_file["album"]["date"] }}</p>
