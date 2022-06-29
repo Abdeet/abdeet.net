@@ -51,7 +51,8 @@ def create_app(test_config=None):
     def create_thumbnail(album_id, image_filename):
         path_to_full_size = os.path.join(app.static_folder, f"albums/{album_id}")
         path_to_thumbnails = os.path.join(app.static_folder, f"albums/{album_id}/thumbnails")
-        image_name, image_ext = os.path.splitext(image_filename)[0], os.path.splitext(image_filename)[1]
+        image_name = os.path.splitext(image_filename)[0]
+        image_ext = os.path.splitext(image_filename)[1]
         image = Image.open(os.path.join(path_to_full_size, image_filename))
         full_width, full_height = image.size
         new_width, new_height = 500 * full_width / full_height, 500
