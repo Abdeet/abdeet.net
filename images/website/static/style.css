@@ -8,8 +8,8 @@
 	--main-h1-font: 2.25em "Times New Roman", serif;
 	--main-h2-color: #571b1b;
 	--main-h2-font: 1.75em "Times New Roman", serif;
-	--main-a-link-color: #6A80E0;
-	--main-a-visited-color: #23B5D3;
+	--main-a-link-color: #8a9be6;
+	--main-a-visited-color: #7063be;
 	--main-a-hover-color: #107F61;
 }
 
@@ -59,8 +59,29 @@ p {
 	display: inline-block;
 }
 
+.full-image {
+	padding: 0;
+	margin: auto 0em 0em;
+	display: inline-block;
+}
+
 .secondary-background {
 	background-color: var(--secondary-bg-color);
+}
+
+.left {
+	float: left;
+	clear: both;
+}
+
+.right {
+	float: right;
+	clear: both;
+}
+
+.center {
+	text-align: justify;
+	text-align-last: center;
 }
 
 footer{

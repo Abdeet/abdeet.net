@@ -9,15 +9,13 @@
     <br>
     <h1>{{ image_json['title'] }}</h1>
     <div class="description">
-        <p>{{ image_json["description"] }}</p>
-        <p><b>Part of </b><a href="{{ url_for('album', album_id=album_id) }}">{{ album_json['title'] }}</a></p>
-        <p><b>Date: </b>{{ image_json["date"] }}</p>
-        <p><b>Location: </b>{{ image_json["location"] }}</p>
-        <p><b>Taken by: </b>{{ image_json["taken_by"] }}</p>
-        <p><b>Taken with: </b>{{ image_json["taken_with"] }}</p>
+        <p><span><b>{{ image_json["date"] }}</b></span> <span class="right"><b>{{ image_json["location"] }}</b></span></p>
+        <p><span>Taken by <b>{{ image_json["taken_by"] }}</b> with <b>{{ image_json["taken_with"] }}</b></span> <span class="right">Part of the <a href="{{ url_for('album', album_id=album_id) }}">{{ album_json['title'] }}</a> album</span></p>
+        <br>
+        <p class="center">{{ image_json["description"] }}</p>
     </div>
     <div class="image-group">
-        <div class="single-image">
+        <div class="full-image">
             <a href="{{ url_for('static', filename='albums/'~album_id~'/'~image_json['filename']) }}"><img src="{{ url_for('static', filename='albums/'~album_id~'/'~image_json['filename']) }}" height="600"></a>
         </div>
     </div>
