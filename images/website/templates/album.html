@@ -9,9 +9,9 @@
     <div class="description">
 	<br>
         <h1>{{ json_file["album"]["title"] }}</h1>
-        <p><b>Date: </b>{{ json_file["album"]["date"] }}</p>
-        <p><b>Location: </b>{{ json_file["album"]["location"] }}</p>
-        <p>{{ json_file["album"]["description"] }}</p>
+        <p><span><b>{{ json_file["album"]["date"] }}</b></span> <span class="right"><b>{{ json_file["album"]["location"] }}</b></span></p>
+        <br>
+        <p class="center">{{ json_file["album"]["description"] }}</p>
     </div>
     <br>
     <div class="image-group">
