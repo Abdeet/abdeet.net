@@ -57,14 +57,12 @@ p {
 	padding: 1em 1em 0;
 	margin: auto 0.5em 1em;
 	display: inline-block;
-	image-orientation: from-image;
 }
 
 .full-image {
 	padding: 0;
 	margin: auto 0em 0em;
 	display: inline-block;
-	image-orientation: from-image;
 }
 
 .secondary-background {
