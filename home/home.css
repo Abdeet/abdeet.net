@@ -16,7 +16,6 @@
 
 body {
 	background-color: var(--main-bg-color);
-	cursor: progress;
 }
 
 
@@ -42,5 +41,4 @@ a:visited {
 
 a:hover {
 	color: var(--main-a-hover-color);
-	cursor: progress;
 }
