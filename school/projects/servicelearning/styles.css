@@ -1,0 +1,105 @@
+:root {
+	--main-bg-color: #b6e0fc;
+	--main-p-color: #5f3875;
+	--main-p-font: 1em "Comic Sans MS", "Comic Sans", sans-serif;
+	--main-footer-font: 1em "Comic Sans MS", "Comic Sans", sans-serif;
+	--main-h1-color: #49385c;
+	--main-h1-font: 2.25em "Libre Baskerville", serif;
+	--main-h2-color: #571b1b;
+	--main-h2-font: 1.25em "Libre Franklin", serif;
+	--image-description-color: #033461;
+	--image-description-font: 1em "Libre Baskerville", serif;
+	--main-a-link-color: #31523d;
+	--main-a-visited-color: #252041;
+	--main-a-hover-color: #107F61;
+}
+
+body {
+	width: 80%;
+	margin: auto;
+	background-color: var(--main-bg-color);
+}
+
+
+h1 {
+	color: var(--main-h1-color);
+	font: var(--main-h1-font);
+	margin: auto;
+	text-align: center;
+}
+
+h2 {
+	color: var(--main-h2-color);
+	font: var(--main-h2-font);
+	margin: auto;
+	text-align: center;
+}
+
+p {
+	color: var(--main-p-color);
+	font: var(--main-p-font);
+    margin: auto;
+	text-align: center;
+}
+
+.text {
+	width: 60%;
+	margin: auto;
+}
+
+.full-image {
+	padding: 0;
+	margin: auto 0em 0em;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+}
+
+.image-description {
+	color: var(--image-description-color);
+	font: var(--image-description-font);
+    margin: auto;
+	text-align: center;
+	font-style: italic;
+}
+
+footer{
+	color: var(--main-p-color);
+	font: var(--main-footer-font);
+	margin: auto;
+	text-align: center;
+	width: 70%;
+}
+
+.left {
+	text-align: left;
+}
+
+.navbar {
+	width: 60%;
+	margin: auto;
+}
+
+.right {
+	float: right;
+	clear: both;
+}
+
+/*Links*/
+
+a:link {
+	color: var(--main-a-link-color);
+}
+
+a:visited {
+	color: var(--main-a-visited-color);
+}
+
+a:hover {
+	color: var(--main-a-hover-color);
+}
+
+.no-underline{
+	text-decoration: none;
+}
