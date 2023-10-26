@@ -12,14 +12,13 @@ htmlcov/
 
 #images
 /images/venv/
-
 /images/instance/
-
 /images/website/static/albums/
-
+/images/website/static/outsidecam/
 /images/images.log
-
 /images/images.wsgi
+/images/website/wsgi.py
+/images/.imagestream
 
 .vscode/
 #music

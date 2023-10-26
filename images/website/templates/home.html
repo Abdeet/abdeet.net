@@ -12,12 +12,19 @@
     <br>
     <br>
     <div class="image-group">
-        {% for album in albums %}
+        {% for album_index in range(albums |length + 1) %}
         <div class="single-image {% if loop.index %2 == 0 %} secondary-background {% endif %}">
-            <a class="no-underline" href="{{ url_for('album', album_id=album['filename']) }}">
-                <img src="{{ url_for('static', filename='albums/'~album['filename']~'/thumbnails/'~random_image(album['filename'], True)) }}" height="300">
-                <p><b>{{ album['title'] }}</b></p>
+	    {% if album_index == albums |length %}
+	    <a class="no-underline" href="{{ url_for('outsidecam') }}">
+	        <img src="{{ url_for('static', filename='outsidecam/'~outsidecam_image) }}" height="300">
+	        <p><b>OutsideCam</b></p>
+	    </a>
+	    {% else %}
+            <a class="no-underline" href="{{ url_for('album', album_id=albums[album_index]['filename']) }}">
+                <img src="{{ url_for('static', filename='albums/'~albums[album_index]['filename']~'/thumbnails/'~random_image(albums[album_index]['filename'], True)) }}" height="300">
+                <p><b>{{ albums[album_index]['title'] }}</b></p>
             </a>
+	    {% endif %}
         </div>
         {% endfor %}
     </div>

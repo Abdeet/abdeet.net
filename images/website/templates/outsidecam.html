@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Outside Cam {% endblock %}
+{% block url %} {{ 'images.abdeet.net'~url_for('outsidecam') }} {% endblock %}
+{% block description %} These images were captured from a Raspberry Pi pointing outside my dorm room window. {% endblock %} 
+
+{% block content %}
+    <br>
+    <h1>OutsideCam</h1>
+    <div class="description">
+        <p class="center">{{ 'This image was taken with a Raspberry Pi from my dorm room window on '~new_image["date"]}}</p>
+    </div>
+    <div class="image-group">
+        <div class="full-image">
+            <a href="{{ url_for('static', filename='outsidecam/'~new_image['filename']) }}"><img src="{{ url_for('static', filename='outsidecam/'~new_image['filename']) }}" height="600"></a>
+        </div>
+    </div>
+    <br>
+    <div class="image-group">
+        {% for image in other_images %}
+        <div class="single-image {% if loop.index %2 == 0 %} secondary-background {% endif %}">
+            <a class="no-underline" href="{{ url_for('static', filename='outsidecam/'~image['filename']) }}">
+                <img src="{{ url_for('static', filename='outsidecam/'~image['filename']) }}" height="300">
+                <p><b>{{ image['date'] }}</b></p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="description">
+        {% if page_number == 1 %}
+            <p><span>&#8203;</span><span class="right"><b><a href="{{ url_for('outsidecam_multpages', page_number=2) }}">Next Page</a></b></span></p>
+	{% else %}
+	    {% if page_number == max_pages %}
+	    <p><span><b><a href="{{ url_for('outsidecam_multpages', page_number=page_number-1) }}">Previous Page</a></b></span></p>
+	    {% else %}
+	        <p><span><b><a href="{{ url_for('outsidecam_multpages', page_number=page_number-1) }}">Previous Page</a></b></span><span class="right"><b><a href="{{ url_for('outsidecam_multpages', page_number=page_number+1) }}">Next Page</a></b></span></p>
+	    {% endif %}
+	{% endif %}
+    </div>
+{% endblock %} 
