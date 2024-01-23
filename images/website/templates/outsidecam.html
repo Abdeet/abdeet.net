@@ -1,40 +1,47 @@
 {% extends 'base.html' %}
 
-{% block title %} Outside Cam {% endblock %}
+{% block title %} OutsideCam {% endblock %}
 {% block url %} {{ 'images.abdeet.net'~url_for('outsidecam') }} {% endblock %}
-{% block description %} These images were captured from a Raspberry Pi pointing outside my dorm room window. {% endblock %} 
+{% block description %} OutsideCam is a project where I take pictures from my dorm room window every five minutes using a Raspberry Pi. Every day's images are converted into a GIF.{% endblock %} 
+{% block image %} {{ 'https://images.abdeet.net'~url_for('static', filename='outsidecam/'~newest_image['filename']) }} {% endblock %}
 
 {% block content %}
     <br>
     <h1>OutsideCam</h1>
     <div class="description">
-        <p class="center">{{ 'This image was taken with a Raspberry Pi from my dorm room window on '~new_image["date"]}}</p>
+        <p class="center">OutsideCam is a project where I take pictures from my dorm room window every five minutes using a Raspberry Pi. Every day's images are converted into a GIF.</p>
+	<br>
+	{% if newest_image != None %}
+        <p class="center">{{ "This image was taken on "~newest_image['date'] }}</p>
+	{% endif %}
     </div>
+    {% if newest_image != None %}
     <div class="image-group">
         <div class="full-image">
-            <a href="{{ url_for('static', filename='outsidecam/'~new_image['filename']) }}"><img src="{{ url_for('static', filename='outsidecam/'~new_image['filename']) }}" height="600"></a>
+            <a href="{{ url_for('static', filename='outsidecam/'~newest_image['filename']) }}"><img src="{{ url_for('static', filename='outsidecam/'~newest_image['filename']) }}" height="600"></a>
         </div>
     </div>
-    <br>
-    <div class="image-group">
-        {% for image in other_images %}
-        <div class="single-image {% if loop.index %2 == 0 %} secondary-background {% endif %}">
-            <a class="no-underline" href="{{ url_for('static', filename='outsidecam/'~image['filename']) }}">
-                <img src="{{ url_for('static', filename='outsidecam/'~image['filename']) }}" height="300">
-                <p><b>{{ image['date'] }}</b></p>
-            </a>
-        </div>
-        {% endfor %}
-    </div>
+    {% endif %}
     <div class="description">
-        {% if page_number == 1 %}
-            <p><span>&#8203;</span><span class="right"><b><a href="{{ url_for('outsidecam_multpages', page_number=2) }}">Next Page</a></b></span></p>
-	{% else %}
-	    {% if page_number == max_pages %}
-	    <p><span><b><a href="{{ url_for('outsidecam_multpages', page_number=page_number-1) }}">Previous Page</a></b></span></p>
-	    {% else %}
-	        <p><span><b><a href="{{ url_for('outsidecam_multpages', page_number=page_number-1) }}">Previous Page</a></b></span><span class="right"><b><a href="{{ url_for('outsidecam_multpages', page_number=page_number+1) }}">Next Page</a></b></span></p>
-	    {% endif %}
+        <p class="center"><a href="{{ url_for('outsidecam_images', page_number=1) }}">Today's Images</a></p>
+	<br>
+	{% if newest_gif != None %}
+        <p class="center">{{ "This GIF is from "~newest_gif['date'] }}</p>
 	{% endif %}
+    </div>
+    {% if newest_gif != None %}
+    <div class="image-group">
+        <div class="full-image">
+            <a href="{{ url_for('static', filename='outsidecam/'~newest_gif['filename']) }}">
+	        <video height="600" autoplay muted loop>
+		    <source src="{{ url_for('static', filename='outsidecam/'~newest_gif['filename']) }}" type="video/mp4">
+		    Your browser does not support the video tag.
+		</video>  
+	    </a>
+        </div>
+    </div>
+    {% endif %}
+    <div class="description">
+        <p class="center"><a href="{{ url_for('outsidecam_gifs', page_number=1) }}">GIF Archive</p>
     </div>
 {% endblock %} 
