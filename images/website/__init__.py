@@ -9,7 +9,7 @@ from urllib.parse import urljoin
 import threading
 from validator_collection import validators, checkers
 import sys
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect
 from datetime import datetime
 
 def create_app(test_config=None):
@@ -81,23 +81,84 @@ def create_app(test_config=None):
             create_thumbnail(album_id, image_filename)
         return f"{image_name}_thumbnail{image_ext}"
 
+    def outsidecam_get_thumbnail(directory):
+        thumbnail = os.path.join(directory, "thumbnail.jpg")
+        if os.path.isfile(thumbnail):   
+            thumbnail_json = {
+                "filename": "thumbnail.jpg",
+                "date": datetime.fromtimestamp(os.path.getmtime(thumbnail)).strftime("%b %d, %Y at %H:%M")
+            }
+            return thumbnail_json
+        return None
+                
     def outsidecam_get_newest_image(directory):
         files = os.listdir(directory)
-        paths = [os.path.basename(filename) for filename in sorted([os.path.join(directory, basename) for basename in files], key=os.path.getctime, reverse=True)]
-        newest_file = paths[0]
-        return newest_file
-        
+        if len(files) == 0:
+            return None
+        paths = [os.path.basename(filename) for filename in sorted([os.path.join(directory, basename) for basename in files], reverse=True) if ".mp4" not in filename and "thumbnail.jpg" not in filename]
+        if len(paths) == 0:
+            return None
+        newest_image = paths[0]
+        newest_image_json = {
+            "filename": newest_image,
+            "date": datetime.fromtimestamp(os.path.getmtime(os.path.join(directory, newest_image))).strftime("%b %d, %Y at %H:%M")
+        }
+        return newest_image_json
 
+    def outsidecam_get_newest_gif(directory):
+        files = os.listdir(directory)
+        paths = [os.path.basename(filename) for filename in sorted([os.path.join(directory, basename) for basename in files], reverse=True) if ".mp4" in filename]
+        if len(paths) == 0:
+            return None
+        newest_gif = paths[0]
+        newest_gif_json = {
+            "filename": newest_gif,
+            "date": datetime.strptime(os.path.splitext(newest_gif)[0], "%Y%m%d").strftime("%b %d, %Y")
+        }
+        return newest_gif_json
+    
+    def outsidecam_get_gif_json(directory, page_number, max_gifs_per_page):
+        files = os.listdir(directory)
+        paths = [os.path.basename(filename) for filename in sorted([os.path.join(directory, basename) for basename in files], reverse=True)]
+        gifs = [filename for filename in paths if ".mp4" in filename]
+        if len(gifs) == 0:
+            return None
+        max_pages = math.ceil(len(gifs) / max_gifs_per_page)
+        newest_file = gifs[(page_number - 1) * max_gifs_per_page]
+        if page_number == max_pages:
+            other_files = gifs[(page_number - 1) * max_gifs_per_page + 1:]
+        else:
+            other_files = gifs[(page_number - 1) * max_gifs_per_page + 1:(page_number) * max_gifs_per_page]
+        gif_json = {
+            "max_pages": max_pages,
+            "new_image": {
+                "filename": newest_file,
+                "date": datetime.strptime(os.path.splitext(newest_file)[0], "%Y%m%d").strftime("%b %d, %Y")
+            },
+            "other_images": [
+            ]
+        }
+        for gif in other_files:
+            gif_json["other_images"].append({
+                "filename": gif,
+                "date": datetime.strptime(os.path.splitext(gif)[0], "%Y%m%d").strftime("%b %d, %Y")
+            })
+        return gif_json
+    
     def outsidecam_get_image_json(directory, page_number, max_images_per_page):
         files = os.listdir(directory)
-        max_pages = math.ceil(len(files) / max_images_per_page)
-        paths = [os.path.basename(filename) for filename in sorted([os.path.join(directory, basename) for basename in files], key=os.path.getctime, reverse=True)]
-        newest_file = paths[(page_number - 1) * max_images_per_page]
+        paths = [os.path.basename(filename) for filename in sorted([os.path.join(directory, basename) for basename in files], reverse=True)]
+        images = [filename for filename in paths if ".mp4" not in filename and "thumbnail.jpg" not in filename]
+        if len(images) == 0:
+            return None
+        max_pages = math.ceil(len(images) / max_images_per_page)
+        newest_file = images[(page_number - 1) * max_images_per_page]
         if page_number == max_pages:
-            other_files = paths[(page_number - 1) * max_images_per_page + 1:]
+            other_files = images[(page_number - 1) * max_images_per_page + 1:]
         else:
-            other_files = paths[(page_number - 1) * max_images_per_page + 1:(page_number) * max_images_per_page]
+            other_files = images[(page_number - 1) * max_images_per_page + 1:(page_number) * max_images_per_page]
         image_json = {
+            "max_pages": max_pages,
             "new_image": {
                 "filename": newest_file,
                 "date": datetime.fromtimestamp(os.path.getmtime(os.path.join(directory, newest_file))).strftime("%b %d, %Y at %H:%M")
@@ -116,7 +177,11 @@ def create_app(test_config=None):
     @app.route("/")
     def home():
         albums = get_albums()
-        outsidecam_image = outsidecam_get_newest_image(os.path.join(app.static_folder, 'outsidecam'))
+        outsidecam_data = outsidecam_get_thumbnail(os.path.join(app.static_folder, 'outsidecam'))
+        if outsidecam_data is None:
+            outsidecam_image = None
+        else:
+            outsidecam_image = outsidecam_data["filename"]
         return render_template('home.html', albums=albums, random_image = random_image, get_json = get_json, get_thumbnail = get_thumbnail, outsidecam_image= outsidecam_image)
 
     @app.route("/home")
@@ -137,15 +202,38 @@ def create_app(test_config=None):
 
     @app.route('/outsidecam')
     def outsidecam():
-        return outsidecam_multpages(1)
+        return render_template('outsidecam.html', newest_image=outsidecam_get_newest_image(os.path.join(app.static_folder, 'outsidecam')), newest_gif=outsidecam_get_newest_gif(os.path.join(app.static_folder, 'outsidecam')))
         
-    @app.route('/outsidecam/<page_number>')
-    def outsidecam_multpages(page_number):
+    @app.route('/outsidecam/images/<page_number>')
+    def outsidecam_images(page_number):
         page_number = int(page_number)
         max_images_per_page = 10
-        max_pages = math.ceil(len(os.listdir(os.path.join(app.static_folder, 'outsidecam'))) / max_images_per_page)
         image_json = outsidecam_get_image_json(os.path.join(app.static_folder, "outsidecam"), page_number, max_images_per_page)
-        return render_template('outsidecam.html', new_image=image_json["new_image"], other_images=image_json["other_images"], page_number=page_number, max_pages=max_pages)
+        if image_json == None:
+            new_image = None
+            other_images = None
+            max_pages = page_number - 1
+        else:
+            new_image = image_json["new_image"]
+            other_images = image_json["other_images"]
+            max_pages = image_json["max_pages"]
+        return render_template('outsidecam_images.html', new_image=new_image, other_images=other_images, page_number=page_number, max_pages=max_pages)
+
+    @app.route('/outsidecam/gifs/<page_number>')
+    def outsidecam_gifs(page_number):
+        page_number = int(page_number)
+        max_gifs_per_page = 10
+        gif_json = outsidecam_get_gif_json(os.path.join(app.static_folder, "outsidecam"), page_number, max_gifs_per_page)
+        if gif_json == None:
+            new_image = None
+            other_images = None
+            max_pages = page_number - 1
+        else:
+            new_image = gif_json["new_image"]
+            other_images = gif_json["other_images"]
+            max_pages = gif_json["max_pages"]
+        
+        return render_template('outsidecam_gifs.html', new_image=new_image, other_images=other_images, page_number=page_number, max_pages=max_pages)
     
     return app
 

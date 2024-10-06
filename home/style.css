@@ -1,0 +1,86 @@
+:root {
+	--main-bg-color: #95C69F;
+	--main-p-color: #404E4D;
+	--main-p-font: 1em "Verdana", sans-serif;
+	--main-footer-font: 1em "Verdana", sans-serif;
+	--main-h1-color: #404E4D;
+	--main-h1-font: 2.25em "Times New Roman", serif;
+	--main-h2-color: #186A77;
+	--main-h2-font: 1.75em "Times New Roman", serif;
+	--main-h3-color: #186A77;
+	--main-h3-font: 1.25em "Times New Roman", serif;
+	--main-a-link-color: #78290F;
+	--main-a-visited-color: #491909;
+	--main-a-hover-color: #107F61;
+}
+
+body {
+	width: 70%;
+	margin: auto;
+	background-color: var(--main-bg-color);
+}
+
+nav {
+    text-align: center;
+    font: var(--main-p-font);
+    font-size: 1.1em;
+}
+
+footer {
+    text-align: center;
+}
+
+hr {
+    color: var(--main-h1-color);
+    background-color: var(--main-h1-color);
+    border-width: 0;
+    height: 2px;
+}
+
+main {
+    text-align: justify;
+}
+
+h1 {
+	color: var(--main-h1-color);
+	font: var(--main-h1-font);
+	margin: auto;
+	text-align: center;
+}
+
+h2 {
+	color: var(--main-h2-color);
+	font: var(--main-h2-font);
+	margin: auto;
+	text-align: center;
+}
+
+h3 {
+	color: var(--main-h3-color);
+	font: var(--main-h3-font);
+	margin: auto;
+	text-align: center;
+}
+
+p {
+	color: var(--main-p-color);
+	font: var(--main-p-font);
+}
+
+/*Links*/
+
+a:link {
+	color: var(--main-a-link-color);
+}
+
+a:visited {
+	color: var(--main-a-visited-color);
+}
+
+a:hover {
+	color: var(--main-a-hover-color);
+}
+
+.no-underline{
+	text-decoration: none;
+}

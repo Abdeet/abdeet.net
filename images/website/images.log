@@ -1,0 +1,870 @@
+[2024-01-28 18:27:32 -0500] [3837] [INFO] Starting gunicorn 21.2.0
+[2024-01-28 18:27:32 -0500] [3837] [INFO] Listening at: unix:/run/images.abdeet.net.sock (3837)
+[2024-01-28 18:27:32 -0500] [3837] [INFO] Using worker: sync
+[2024-01-28 18:27:32 -0500] [3838] [INFO] Booting worker with pid: 3838
+[2024-01-28 18:27:32 -0500] [3838] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 5, in <module>
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+[2024-01-28 18:27:32 -0500] [3838] [INFO] Worker exiting (pid: 3838)
+[2024-01-28 18:27:32 -0500] [3839] [INFO] Booting worker with pid: 3839
+[2024-01-28 18:27:32 -0500] [3837] [ERROR] Worker (pid:3838) exited with code 3
+[2024-01-28 18:27:32 -0500] [3839] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 5, in <module>
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+[2024-01-28 18:27:32 -0500] [3839] [INFO] Worker exiting (pid: 3839)
+[2024-01-28 18:27:32 -0500] [3837] [ERROR] Worker (pid:3839) exited with code 3
+[2024-01-28 18:28:21 -0500] [3895] [INFO] Starting gunicorn 21.2.0
+[2024-01-28 18:28:21 -0500] [3895] [INFO] Listening at: unix:/run/images.abdeet.net.sock (3895)
+[2024-01-28 18:28:21 -0500] [3895] [INFO] Using worker: sync
+[2024-01-28 18:28:21 -0500] [3896] [INFO] Booting worker with pid: 3896
+[2024-01-28 18:28:21 -0500] [3897] [INFO] Booting worker with pid: 3897
+[2024-01-28 18:28:21 -0500] [3898] [INFO] Booting worker with pid: 3898
+[2024-01-28 18:28:21 -0500] [3896] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2024-01-28 18:28:21 -0500] [3896] [INFO] Worker exiting (pid: 3896)
+[2024-01-28 18:28:21 -0500] [3897] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2024-01-28 18:28:21 -0500] [3897] [INFO] Worker exiting (pid: 3897)
+[2024-01-28 18:28:21 -0500] [3898] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 6, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[2024-01-28 18:28:21 -0500] [3898] [INFO] Worker exiting (pid: 3898)
+[2024-01-28 18:28:21 -0500] [3895] [ERROR] Worker (pid:3896) exited with code 3
+[2024-01-28 18:28:21 -0500] [3895] [ERROR] Worker (pid:3898) was sent SIGTERM!
+[2024-01-28 18:28:21 -0500] [3895] [ERROR] Worker (pid:3897) was sent SIGTERM!
+[2024-01-28 18:28:21 -0500] [3895] [ERROR] Shutting down: Master
+[2024-01-28 18:28:21 -0500] [3895] [ERROR] Reason: Worker failed to boot.
+[2024-01-28 18:28:51 -0500] [3937] [INFO] Starting gunicorn 21.2.0
+[2024-01-28 18:28:51 -0500] [3937] [INFO] Listening at: unix:/run/images.abdeet.net.sock (3937)
+[2024-01-28 18:28:51 -0500] [3937] [INFO] Using worker: sync
+[2024-01-28 18:28:51 -0500] [3938] [INFO] Booting worker with pid: 3938
+[2024-01-28 18:28:51 -0500] [3939] [INFO] Booting worker with pid: 3939
+[2024-01-28 18:28:51 -0500] [3940] [INFO] Booting worker with pid: 3940
+[2024-01-28 18:28:52 -0500] [3938] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 7, in <module>
+    from bs4 import BeautifulSoup, SoupStrainer
+ModuleNotFoundError: No module named 'bs4'
+[2024-01-28 18:28:52 -0500] [3938] [INFO] Worker exiting (pid: 3938)
+[2024-01-28 18:28:52 -0500] [3939] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 7, in <module>
+    from bs4 import BeautifulSoup, SoupStrainer
+ModuleNotFoundError: No module named 'bs4'
+[2024-01-28 18:28:52 -0500] [3939] [INFO] Worker exiting (pid: 3939)
+[2024-01-28 18:28:52 -0500] [3940] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 7, in <module>
+    from bs4 import BeautifulSoup, SoupStrainer
+ModuleNotFoundError: No module named 'bs4'
+[2024-01-28 18:28:52 -0500] [3940] [INFO] Worker exiting (pid: 3940)
+[2024-01-28 18:28:52 -0500] [3937] [ERROR] Worker (pid:3938) exited with code 3
+[2024-01-28 18:28:52 -0500] [3937] [ERROR] Worker (pid:3939) was sent SIGTERM!
+[2024-01-28 18:28:52 -0500] [3937] [ERROR] Worker (pid:3940) was sent SIGTERM!
+[2024-01-28 18:28:52 -0500] [3937] [ERROR] Shutting down: Master
+[2024-01-28 18:28:52 -0500] [3937] [ERROR] Reason: Worker failed to boot.
+[2024-01-28 18:29:07 -0500] [3969] [INFO] Starting gunicorn 21.2.0
+[2024-01-28 18:29:07 -0500] [3969] [INFO] Listening at: unix:/run/images.abdeet.net.sock (3969)
+[2024-01-28 18:29:07 -0500] [3969] [INFO] Using worker: sync
+[2024-01-28 18:29:07 -0500] [3970] [INFO] Booting worker with pid: 3970
+[2024-01-28 18:29:07 -0500] [3971] [INFO] Booting worker with pid: 3971
+[2024-01-28 18:29:07 -0500] [3972] [INFO] Booting worker with pid: 3972
+[2024-01-28 18:29:08 -0500] [3970] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 10, in <module>
+    from validator_collection import validators, checkers
+ModuleNotFoundError: No module named 'validator_collection'
+[2024-01-28 18:29:08 -0500] [3970] [INFO] Worker exiting (pid: 3970)
+[2024-01-28 18:29:08 -0500] [3971] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 10, in <module>
+    from validator_collection import validators, checkers
+ModuleNotFoundError: No module named 'validator_collection'
+[2024-01-28 18:29:08 -0500] [3971] [INFO] Worker exiting (pid: 3971)
+[2024-01-28 18:29:08 -0500] [3972] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/abdeet/images/venv/lib/python3.11/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/var/www/abdeet/images/website/wsgi.py", line 1, in <module>
+    from __init__ import create_app
+  File "/var/www/abdeet/images/website/__init__.py", line 10, in <module>
+    from validator_collection import validators, checkers
+ModuleNotFoundError: No module named 'validator_collection'
+[2024-01-28 18:29:08 -0500] [3972] [INFO] Worker exiting (pid: 3972)
+[2024-01-28 18:29:08 -0500] [3969] [ERROR] Worker (pid:3970) exited with code 3
+[2024-01-28 18:29:08 -0500] [3969] [ERROR] Worker (pid:3972) was sent SIGTERM!
+[2024-01-28 18:29:08 -0500] [3969] [ERROR] Worker (pid:3971) was sent SIGTERM!
+[2024-01-28 18:29:08 -0500] [3969] [ERROR] Shutting down: Master
+[2024-01-28 18:29:08 -0500] [3969] [ERROR] Reason: Worker failed to boot.
+[2024-01-28 18:29:24 -0500] [3999] [INFO] Starting gunicorn 21.2.0
+[2024-01-28 18:29:24 -0500] [3999] [INFO] Listening at: unix:/run/images.abdeet.net.sock (3999)
+[2024-01-28 18:29:24 -0500] [3999] [INFO] Using worker: sync
+[2024-01-28 18:29:25 -0500] [4000] [INFO] Booting worker with pid: 4000
+[2024-01-28 18:29:25 -0500] [4001] [INFO] Booting worker with pid: 4001
+[2024-01-28 18:29:25 -0500] [4002] [INFO] Booting worker with pid: 4002
+[2024-01-28 18:31:31 -0500] [4002] [INFO] Worker exiting (pid: 4002)
+[2024-01-28 18:31:31 -0500] [4001] [INFO] Worker exiting (pid: 4001)
+[2024-01-28 18:31:31 -0500] [4000] [INFO] Worker exiting (pid: 4000)
+[2024-01-28 18:31:31 -0500] [3999] [INFO] Handling signal: term
+[2024-01-28 18:31:31 -0500] [3999] [ERROR] Worker (pid:4001) was sent SIGTERM!
+[2024-01-28 18:31:31 -0500] [3999] [ERROR] Worker (pid:4002) was sent SIGTERM!
+[2024-01-28 18:31:31 -0500] [3999] [ERROR] Worker (pid:4000) was sent SIGTERM!
+[2024-01-28 18:31:31 -0500] [3999] [INFO] Shutting down: Master
+[2024-01-28 18:31:31 -0500] [4095] [INFO] Starting gunicorn 21.2.0
+[2024-01-28 18:31:31 -0500] [4095] [INFO] Listening at: unix:/run/images.abdeet.net.sock (4095)
+[2024-01-28 18:31:31 -0500] [4095] [INFO] Using worker: sync
+[2024-01-28 18:31:31 -0500] [4097] [INFO] Booting worker with pid: 4097
+[2024-01-28 18:31:31 -0500] [4098] [INFO] Booting worker with pid: 4098
+[2024-01-28 18:31:31 -0500] [4099] [INFO] Booting worker with pid: 4099
+[2024-01-28 18:32:17 -0500] [4097] [INFO] Worker exiting (pid: 4097)
+[2024-01-28 18:32:17 -0500] [4095] [INFO] Handling signal: term
+[2024-01-28 18:32:17 -0500] [4098] [INFO] Worker exiting (pid: 4098)
+[2024-01-28 18:32:17 -0500] [4099] [INFO] Worker exiting (pid: 4099)
+[2024-01-28 18:32:17 -0500] [4095] [ERROR] Worker (pid:4097) was sent SIGTERM!
+[2024-01-28 18:32:17 -0500] [4095] [INFO] Shutting down: Master
+[2024-01-28 18:32:18 -0500] [4143] [INFO] Starting gunicorn 21.2.0
+[2024-01-28 18:32:18 -0500] [4143] [INFO] Listening at: unix:images.sock (4143)
+[2024-01-28 18:32:18 -0500] [4143] [INFO] Using worker: sync
+[2024-01-28 18:32:18 -0500] [4144] [INFO] Booting worker with pid: 4144
+[2024-01-28 18:32:18 -0500] [4145] [INFO] Booting worker with pid: 4145
+[2024-01-28 18:32:18 -0500] [4146] [INFO] Booting worker with pid: 4146
+[2024-02-01 10:25:31 -0500] [2544] [INFO] Starting gunicorn 21.2.0
+[2024-02-01 10:25:31 -0500] [2544] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (2544)
+[2024-02-01 10:25:31 -0500] [2544] [INFO] Using worker: sync
+[2024-02-01 10:25:31 -0500] [2545] [INFO] Booting worker with pid: 2545
+[2024-02-01 10:25:31 -0500] [2546] [INFO] Booting worker with pid: 2546
+[2024-02-01 10:25:32 -0500] [2549] [INFO] Booting worker with pid: 2549
+[2024-02-23 03:37:45 -0500] [5037] [INFO] Starting gunicorn 21.2.0
+[2024-02-23 03:37:45 -0500] [5037] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (5037)
+[2024-02-23 03:37:45 -0500] [5037] [INFO] Using worker: sync
+[2024-02-23 03:37:45 -0500] [5039] [INFO] Booting worker with pid: 5039
+[2024-02-23 03:37:45 -0500] [5040] [INFO] Booting worker with pid: 5040
+[2024-02-23 03:37:45 -0500] [5042] [INFO] Booting worker with pid: 5042
+[2024-03-01 09:42:08 -0500] [3779] [INFO] Starting gunicorn 21.2.0
+[2024-03-01 09:42:08 -0500] [3779] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (3779)
+[2024-03-01 09:42:08 -0500] [3779] [INFO] Using worker: sync
+[2024-03-01 09:42:08 -0500] [3780] [INFO] Booting worker with pid: 3780
+[2024-03-01 09:42:08 -0500] [3781] [INFO] Booting worker with pid: 3781
+[2024-03-01 09:42:08 -0500] [3783] [INFO] Booting worker with pid: 3783
+[2024-04-15 00:54:22 -0400] [3783] [INFO] Worker exiting (pid: 3783)
+[2024-04-15 00:54:22 -0400] [3780] [INFO] Worker exiting (pid: 3780)
+[2024-04-15 00:54:22 -0400] [3781] [INFO] Worker exiting (pid: 3781)
+[2024-04-15 00:54:23 -0400] [3779] [INFO] Handling signal: term
+[2024-04-15 00:54:23 -0400] [3779] [ERROR] Worker (pid:3781) was sent SIGTERM!
+[2024-04-15 00:54:23 -0400] [3779] [ERROR] Worker (pid:3783) was sent SIGTERM!
+[2024-04-15 00:54:23 -0400] [3779] [ERROR] Worker (pid:3780) was sent SIGTERM!
+[2024-04-15 00:54:23 -0400] [3779] [INFO] Shutting down: Master
+[2024-04-15 02:48:06 -0400] [2816] [INFO] Starting gunicorn 21.2.0
+[2024-04-15 02:48:06 -0400] [2816] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (2816)
+[2024-04-15 02:48:06 -0400] [2816] [INFO] Using worker: sync
+[2024-04-15 02:48:06 -0400] [2817] [INFO] Booting worker with pid: 2817
+[2024-04-15 02:48:07 -0400] [2818] [INFO] Booting worker with pid: 2818
+[2024-04-15 02:48:07 -0400] [2821] [INFO] Booting worker with pid: 2821
+[2024-04-30 07:21:30 -0400] [2676] [INFO] Starting gunicorn 21.2.0
+[2024-04-30 07:21:30 -0400] [2676] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (2676)
+[2024-04-30 07:21:30 -0400] [2676] [INFO] Using worker: sync
+[2024-04-30 07:21:30 -0400] [2677] [INFO] Booting worker with pid: 2677
+[2024-04-30 07:21:30 -0400] [2678] [INFO] Booting worker with pid: 2678
+[2024-04-30 07:21:30 -0400] [2680] [INFO] Booting worker with pid: 2680
+[2024-05-09 03:21:55 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:2677)
+[2024-05-09 03:22:04 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:2678)
+[2024-05-09 03:22:04 -0400] [2677] [INFO] Worker exiting (pid: 2677)
+[2024-05-09 03:22:04 -0400] [2678] [INFO] Worker exiting (pid: 2678)
+[2024-05-09 03:22:05 -0400] [2676] [ERROR] Worker (pid:2677) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:22:05 -0400] [2676] [ERROR] Worker (pid:2678) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:22:05 -0400] [70372] [INFO] Booting worker with pid: 70372
+[2024-05-09 03:22:05 -0400] [70373] [INFO] Booting worker with pid: 70373
+[2024-05-09 03:22:35 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70372)
+[2024-05-09 03:22:42 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70373)
+[2024-05-09 03:22:42 -0400] [70373] [INFO] Worker exiting (pid: 70373)
+[2024-05-09 03:22:42 -0400] [70372] [INFO] Worker exiting (pid: 70372)
+[2024-05-09 03:22:43 -0400] [2676] [ERROR] Worker (pid:70372) exited with code 1
+[2024-05-09 03:22:43 -0400] [2676] [ERROR] Worker (pid:70372) exited with code 1.
+[2024-05-09 03:22:43 -0400] [2676] [ERROR] Worker (pid:70373) exited with code 1
+[2024-05-09 03:22:43 -0400] [2676] [ERROR] Worker (pid:70373) exited with code 1.
+[2024-05-09 03:22:43 -0400] [70376] [INFO] Booting worker with pid: 70376
+[2024-05-09 03:22:43 -0400] [70377] [INFO] Booting worker with pid: 70377
+[2024-05-09 03:23:13 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70376)
+[2024-05-09 03:23:13 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70377)
+[2024-05-09 03:23:14 -0400] [2676] [ERROR] Worker (pid:70376) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:23:23 -0400] [2676] [ERROR] Worker (pid:70377) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:23:23 -0400] [70381] [INFO] Booting worker with pid: 70381
+[2024-05-09 03:23:23 -0400] [70383] [INFO] Booting worker with pid: 70383
+[2024-05-09 03:23:53 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70381)
+[2024-05-09 03:23:53 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70383)
+[2024-05-09 03:23:54 -0400] [2676] [ERROR] Worker (pid:70381) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:24:09 -0400] [2676] [ERROR] Worker (pid:70383) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:24:09 -0400] [70385] [INFO] Booting worker with pid: 70385
+[2024-05-09 03:24:09 -0400] [70386] [INFO] Booting worker with pid: 70386
+[2024-05-09 03:24:39 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70385)
+[2024-05-09 03:24:48 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70386)
+[2024-05-09 03:24:48 -0400] [70385] [INFO] Worker exiting (pid: 70385)
+[2024-05-09 03:24:48 -0400] [70386] [INFO] Worker exiting (pid: 70386)
+[2024-05-09 03:24:49 -0400] [2676] [ERROR] Worker (pid:70386) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:24:49 -0400] [2676] [ERROR] Worker (pid:70385) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:24:49 -0400] [70387] [INFO] Booting worker with pid: 70387
+[2024-05-09 03:24:49 -0400] [70388] [INFO] Booting worker with pid: 70388
+[2024-05-09 03:25:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70387)
+[2024-05-09 03:26:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70388)
+[2024-05-09 03:26:19 -0400] [70388] [INFO] Worker exiting (pid: 70388)
+[2024-05-09 03:26:19 -0400] [70387] [INFO] Worker exiting (pid: 70387)
+[2024-05-09 03:26:20 -0400] [2676] [ERROR] Worker (pid:70387) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:26:20 -0400] [2676] [ERROR] Worker (pid:70388) was sent SIGKILL! Perhaps out of memory?
+[2024-05-09 03:26:20 -0400] [70390] [INFO] Booting worker with pid: 70390
+[2024-05-09 03:26:20 -0400] [70391] [INFO] Booting worker with pid: 70391
+[2024-05-09 03:26:50 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70390)
+[2024-05-09 03:26:50 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70391)
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70391) exited with code 1
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70391) exited with code 1.
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70390) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:27:24 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70400)
+[2024-05-17 03:28:54 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:2680)
+[2024-05-17 03:29:04 -0400] [2676] [ERROR] Worker (pid:70400) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:29:27 -0400] [2676] [ERROR] Worker (pid:2680) exited with code 1
+[2024-05-17 03:29:27 -0400] [2676] [ERROR] Worker (pid:2680) exited with code 1.
+[2024-05-17 03:29:40 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123560)
+[2024-05-17 03:30:04 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123561)
+[2024-05-17 03:30:05 -0400] [2676] [ERROR] Worker (pid:123560) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:30:05 -0400] [2676] [ERROR] Worker (pid:123561) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123566)
+[2024-05-17 03:31:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123567)
+[2024-05-17 03:31:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70399)
+[2024-05-17 03:31:27 -0400] [2676] [ERROR] Worker (pid:70399) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [2676] [ERROR] Worker (pid:123566) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [2676] [ERROR] Worker (pid:123567) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:32:38 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123571)
+[2024-05-17 03:32:38 -0400] [2676] [ERROR] Worker (pid:123571) exited with code 1
+[2024-05-17 03:32:38 -0400] [2676] [ERROR] Worker (pid:123571) exited with code 1.
+[2024-05-24 03:03:49 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123575)
+[2024-05-24 03:03:53 -0400] [2676] [ERROR] Worker (pid:123575) exited with code 1
+[2024-05-24 03:03:53 -0400] [2676] [ERROR] Worker (pid:123575) exited with code 1.
+[2024-05-24 03:04:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165249)
+[2024-05-24 03:04:48 -0400] [2676] [ERROR] Worker (pid:165249) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:05:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165253)
+[2024-05-24 03:05:28 -0400] [2676] [ERROR] Worker (pid:165253) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:06:01 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165254)
+[2024-05-24 03:06:20 -0400] [2676] [ERROR] Worker (pid:165254) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:06:53 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165256)
+[2024-05-24 03:07:03 -0400] [2676] [ERROR] Worker (pid:165256) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:07:33 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165258)
+[2024-05-24 03:07:37 -0400] [2676] [ERROR] Worker (pid:165258) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:08:07 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165259)
+[2024-05-24 03:08:38 -0400] [2676] [ERROR] Worker (pid:165259) exited with code 1
+[2024-05-24 03:08:38 -0400] [2676] [ERROR] Worker (pid:165259) exited with code 1.
+[2024-05-24 03:09:28 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165265)
+[2024-05-24 03:09:29 -0400] [2676] [ERROR] Worker (pid:165265) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:10:00 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165276)
+[2024-05-24 03:10:01 -0400] [2676] [ERROR] Worker (pid:165276) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:10:39 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165288)
+[2024-05-24 03:10:44 -0400] [2676] [ERROR] Worker (pid:165288) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:11:15 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165290)
+[2024-05-24 03:11:16 -0400] [2676] [ERROR] Worker (pid:165290) was sent SIGKILL! Perhaps out of memory?
+[2024-05-24 03:11:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165291)
+[2024-05-24 06:05:41 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123572)
+L] WORKER TIMEOUT (pid:70391)
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70391) exited with code 1
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70391) exited with code 1.
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70390) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:27:24 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70400)
+[2024-05-17 03:28:54 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:2680)
+[2024-05-17 03:29:04 -0400] [2676] [ERROR] Worker (pid:70400) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:29:27 -0400] [2676] [ERROR] Worker (pid:2680) exited with code 1
+[2024-05-17 03:29:27 -0400] [2676] [ERROR] Worker (pid:2680) exited with code 1.
+[2024-05-17 03:29:40 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123560)
+[2024-05-17 03:30:04 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123561)
+[2024-05-17 03:30:05 -0400] [2676] [ERROR] Worker (pid:123560) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:30:05 -0400] [2676] [ERROR] Worker (pid:123561) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123566)
+[2024-05-17 03:31:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123567)
+[2024-05-17 03:31:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70399)
+[2024-05-17 03:31:27 -0400] [2676] [ERROR] Worker (pid:70399) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [2676] [ERROR] Worker (pid:123566) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [2676] [ERROR] Worker (pid:123567) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [123572] [INFO] Booting worker with pid: 123572
+[2024-05-24 06:05:46 -0400] [123572] [INFO] Worker exiting (pid: 123572)
+[2024-05-24 06:05:46 -0400] [2676] [ERROR] Worker (pid:123572) exited with code 1
+[2024-05-24 06:05:46 -0400] [2676] [ERROR] Worker (pid:123572) exited with code 1.
+[2024-05-24 06:06:04 -0400] [166228] [INFO] Booting worker with pid: 166228
+[2024-05-28 03:20:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123573)
+L] WORKER TIMEOUT (pid:70391)
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70391) exited with code 1
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70391) exited with code 1.
+[2024-05-09 03:27:12 -0400] [2676] [ERROR] Worker (pid:70390) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:27:24 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70400)
+[2024-05-17 03:28:54 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:2680)
+[2024-05-17 03:29:04 -0400] [2676] [ERROR] Worker (pid:70400) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:29:27 -0400] [2676] [ERROR] Worker (pid:2680) exited with code 1
+[2024-05-17 03:29:27 -0400] [2676] [ERROR] Worker (pid:2680) exited with code 1.
+[2024-05-17 03:29:40 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123560)
+[2024-05-17 03:30:04 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123561)
+[2024-05-17 03:30:05 -0400] [2676] [ERROR] Worker (pid:123560) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:30:05 -0400] [2676] [ERROR] Worker (pid:123561) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123566)
+[2024-05-17 03:31:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:123567)
+[2024-05-17 03:31:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:70399)
+[2024-05-17 03:31:27 -0400] [2676] [ERROR] Worker (pid:70399) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [2676] [ERROR] Worker (pid:123566) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [2676] [ERROR] Worker (pid:123567) was sent SIGKILL! Perhaps out of memory?
+[2024-05-17 03:31:37 -0400] [123573] [INFO] Booting worker with pid: 123573
+[2024-05-28 03:20:23 -0400] [123573] [INFO] Worker exiting (pid: 123573)
+[2024-05-28 03:20:24 -0400] [2676] [ERROR] Worker (pid:123573) exited with code 1
+[2024-05-28 03:20:35 -0400] [2676] [ERROR] Worker (pid:123573) exited with code 1.
+[2024-05-28 03:20:35 -0400] [186465] [INFO] Booting worker with pid: 186465
+[2024-05-28 03:21:06 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186465)
+[2024-05-28 03:21:[2024-05-28 03:21:30 -0400] [2676] [ERROR] Worker (pid:186465) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:03 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186468)
+[2024-05-28 03:22:04 -0400] [2676] [ERROR] Worker (pid:186468) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:38 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165299)
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1.
+[2024-05-28 03:23:09 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186469)
+[2024-05-28 03:23:10 -0400] [2676] [ERROR] Worker (pid:186469) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186470)
+[2024-05-28 03:23:24 -0400] [2676] [ERROR] Worker (pid:186470) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:54 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186471)
+[2024-05-28 03:24:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186474)
+[2024-05-28 03:24:20 -0400] [2676] [ERROR] Worker (pid:186471) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:24:50 -0400] [2676] [ERROR] Worker (pid:186474) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186477)
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186478)
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186477) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186478) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186479)
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186480)
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186479) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186480) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186481)
+[2024-05-28 03:26:45 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186482)
+[2024-05-28 03:26:46 -0400] [2676] [ERROR] Worker (pid:186481) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:51 -0400] [2676] [ERROR] Worker (pid:186482) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:24 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186486)
+[2024-05-28 03:27:25 -0400] [2676] [ERROR] Worker (pid:186486) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:40 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186487)
+[2024-05-28 03:27:40 -0400] [2676] [ERROR] Worker (pid:186487) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:24:51 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:166228)
+[2024-05-29 03:25:37 -0400] [2676] [ERROR] Worker (pid:166228) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:26:07 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199344)
+[2024-05-29 03:26:25 -0400] [2676] [ERROR] Worker (pid:199344) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:26:55 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199347)
+[2024-05-29 03:26:56 -0400] [2676] [ERROR] Worker (pid:199347) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:27:42 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199350)
+[2024-05-29 03:27:48 -0400] [2676] [ERROR] Worker (pid:199350) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:28:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199352)
+[2024-05-29 03:28:28 -0400] [2676] [ERROR] Worker (pid:199352) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:28:58 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199354)
+[2024-05-29 03:29:14 -0400] [2676] [ERROR] Worker (pid:199354) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:29:44 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199355)
+[2024-05-29 03:29:53 -0400] [2676] [ERROR] Worker (pid:199355) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:30:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199356)
+[2024-05-29 03:30:46 -0400] [2676] [ERROR] Worker (pid:199356) was sent SIGKILL! Perhaps out of memory?
+[2024-05-30 18:09:29 -0400] [199372] [INFO] Worker exiting (pid: 199372)
+[2024-05-28 03:21:30 -0400] [2676] [ERROR] Worker (pid:186465) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:03 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186468)
+[2024-05-28 03:22:04 -0400] [2676] [ERROR] Worker (pid:186468) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:38 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165299)
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1.
+[2024-05-28 03:23:09 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186469)
+[2024-05-28 03:23:10 -0400] [2676] [ERROR] Worker (pid:186469) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186470)
+[2024-05-28 03:23:24 -0400] [2676] [ERROR] Worker (pid:186470) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:54 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186471)
+[2024-05-28 03:24:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186474)
+[2024-05-28 03:24:20 -0400] [2676] [ERROR] Worker (pid:186471) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:24:50 -0400] [2676] [ERROR] Worker (pid:186474) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186477)
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186478)
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186477) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186478) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186479)
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186480)
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186479) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186480) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186481)
+[2024-05-28 03:26:45 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186482)
+[2024-05-28 03:26:46 -0400] [2676] [ERROR] Worker (pid:186481) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:51 -0400] [2676] [ERROR] Worker (pid:186482) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:24 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186486)
+[2024-05-28 03:27:25 -0400] [2676] [ERROR] Worker (pid:186486) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:40 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186487)
+[2024-05-28 03:27:40 -0400] [2676] [ERROR] Worker (pid:186487) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:24:51 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:166228)
+[2024-05-29 03:25:37 -0400] [2676] [ERROR] Worker (pid:166228) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:26:07 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199344)
+[2024-05-29 03:26:25 -0400] [2676] [ERROR] Worker (pid:199344) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:26:55 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199347)
+[2024-05-29 03:26:56 -0400] [2676] [ERROR] Worker (pid:199347) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:27:42 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199350)
+[2024-05-29 03:27:48 -0400] [2676] [ERROR] Worker (pid:199350) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:28:18 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199352)
+[2024-05-29 03:28:28 -0400] [2676] [ERROR] Worker (pid:199352) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:28:58 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199354)
+[2024-05-29 03:29:14 -0400] [2676] [ERROR] Worker (pid:199354) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:29:44 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199355)
+[2024-05-29 03:29:53 -0400] [2676] [ERROR] Worker (pid:199355) was sent SIGKILL! Perhaps out of memory?
+[2024-05-29 03:30:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:199356)
+[2024-05-29 03:30:46 -0400] [2676] [ERROR] Worker (pid:199356) was sent SIGKILL! Perhaps out of memory?
+[2024-05-30 18:09:29 -0400] [2676] [INFO] Handling signal: term
+[2024-05-28 03:21:30 -0400] [2676] [ERROR] Worker (pid:186465) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:03 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186468)
+[2024-05-28 03:22:04 -0400] [2676] [ERROR] Worker (pid:186468) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:38 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165299)
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1.
+[2024-05-28 03:23:09 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186469)
+[2024-05-28 03:23:10 -0400] [2676] [ERROR] Worker (pid:186469) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186470)
+[2024-05-28 03:23:24 -0400] [2676] [ERROR] Worker (pid:186470) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:54 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186471)
+[2024-05-28 03:24:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186474)
+[2024-05-28 03:24:20 -0400] [2676] [ERROR] Worker (pid:186471) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:24:50 -0400] [2676] [ERROR] Worker (pid:186474) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186477)
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186478)
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186477) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186478) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186479)
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186480)
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186479) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186480) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186481)
+[2024-05-28 03:26:45 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186482)
+[2024-05-28 03:26:46 -0400] [2676] [ERROR] Worker (pid:186481) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:51 -0400] [2676] [ERROR] Worker (pid:186482) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:24 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186486)
+[2024-05-28 03:27:25 -0400] [2676] [ERROR] Worker (pid:186486) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:40 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186487)
+[2024-05-28 03:27:40 -0400] [2676] [ERROR] Worker (pid:186487) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:40 -0400] [186490] [INFO] Booting worker with pid: 186490
+[2024-05-30 18:09:29 -0400] [186490] [INFO] Worker exiting (pid: 186490)
+[2024-05-28 03:21:30 -0400] [2676] [ERROR] Worker (pid:186465) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:03 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186468)
+[2024-05-28 03:22:04 -0400] [2676] [ERROR] Worker (pid:186468) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:22:38 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:165299)
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1
+[2024-05-28 03:22:41 -0400] [2676] [ERROR] Worker (pid:165299) exited with code 1.
+[2024-05-28 03:23:09 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186469)
+[2024-05-28 03:23:10 -0400] [2676] [ERROR] Worker (pid:186469) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186470)
+[2024-05-28 03:23:24 -0400] [2676] [ERROR] Worker (pid:186470) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:23:54 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186471)
+[2024-05-28 03:24:19 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186474)
+[2024-05-28 03:24:20 -0400] [2676] [ERROR] Worker (pid:186471) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:24:50 -0400] [2676] [ERROR] Worker (pid:186474) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186477)
+[2024-05-28 03:25:20 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186478)
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186477) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:21 -0400] [2676] [ERROR] Worker (pid:186478) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186479)
+[2024-05-28 03:25:52 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186480)
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186479) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:25:53 -0400] [2676] [ERROR] Worker (pid:186480) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:23 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186481)
+[2024-05-28 03:26:45 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186482)
+[2024-05-28 03:26:46 -0400] [2676] [ERROR] Worker (pid:186481) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:26:51 -0400] [2676] [ERROR] Worker (pid:186482) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:24 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186486)
+[2024-05-28 03:27:25 -0400] [2676] [ERROR] Worker (pid:186486) was sent SIGKILL! Perhaps out of memory?
+[2024-05-28 03:27:40 -0400] [2676] [CRITICAL] WORKER TIMEOUT (pid:186487)
+[2024-05-28 03:27:40 -0400] [186489] [INFO] Booting worker with pid: 186489
+[2024-05-30 18:09:29 -0400] [186489] [INFO] Worker exiting (pid: 186489)
+[2024-05-30 18:09:29 -0400] [2676] [ERROR] Worker (pid:186489) was sent SIGTERM!
+[2024-05-30 18:09:29 -0400] [2676] [ERROR] Worker (pid:199372) was sent SIGTERM!
+[2024-05-30 18:09:29 -0400] [2676] [ERROR] Worker (pid:186490) was sent SIGTERM!
+[2024-05-30 18:09:29 -0400] [2676] [INFO] Shutting down: Master
+[2024-05-31 00:43:05 -0400] [2232] [INFO] Starting gunicorn 21.2.0
+[2024-05-31 00:43:05 -0400] [2232] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (2232)
+[2024-05-31 00:43:05 -0400] [2232] [INFO] Using worker: sync
+[2024-05-31 00:43:05 -0400] [2233] [INFO] Booting worker with pid: 2233
+[2024-05-31 00:43:05 -0400] [2234] [INFO] Booting worker with pid: 2234
+[2024-05-31 00:43:05 -0400] [2235] [INFO] Booting worker with pid: 2235
+[2024-05-31 12:10:46 -0400] [3189] [INFO] Starting gunicorn 21.2.0
+[2024-05-31 12:10:46 -0400] [3189] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (3189)
+[2024-05-31 12:10:46 -0400] [3189] [INFO] Using worker: sync
+[2024-05-31 12:10:46 -0400] [3190] [INFO] Booting worker with pid: 3190
+[2024-05-31 12:10:46 -0400] [3191] [INFO] Booting worker with pid: 3191
+[2024-05-31 12:10:46 -0400] [3192] [INFO] Booting worker with pid: 3192
+[2024-05-31 12:15:28 -0400] [3192] [INFO] Worker exiting (pid: 3192)
+[2024-05-31 12:15:28 -0400] [3189] [INFO] Handling signal: term
+[2024-05-31 12:15:28 -0400] [3191] [INFO] Worker exiting (pid: 3191)
+[2024-05-31 12:15:28 -0400] [3190] [INFO] Worker exiting (pid: 3190)
+[2024-05-31 12:15:29 -0400] [3189] [INFO] Shutting down: Master
+[2024-05-31 14:04:40 -0400] [3894] [INFO] Starting gunicorn 21.2.0
+[2024-05-31 14:04:40 -0400] [3894] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (3894)
+[2024-05-31 14:04:40 -0400] [3894] [INFO] Using worker: sync
+[2024-05-31 14:04:40 -0400] [3895] [INFO] Booting worker with pid: 3895
+[2024-05-31 14:04:40 -0400] [3896] [INFO] Booting worker with pid: 3896
+[2024-05-31 14:04:40 -0400] [3897] [INFO] Booting worker with pid: 3897
+[2024-08-29 19:06:00 -0400] [2504] [INFO] Starting gunicorn 21.2.0
+[2024-08-29 19:06:00 -0400] [2504] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (2504)
+[2024-08-29 19:06:00 -0400] [2504] [INFO] Using worker: sync
+[2024-08-29 19:06:00 -0400] [2505] [INFO] Booting worker with pid: 2505
+[2024-08-29 19:06:00 -0400] [2506] [INFO] Booting worker with pid: 2506
+[2024-08-29 19:06:00 -0400] [2507] [INFO] Booting worker with pid: 2507
+[2024-09-15 14:14:48 -0400] [2549] [INFO] Starting gunicorn 21.2.0
+[2024-09-15 14:14:48 -0400] [2549] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (2549)
+[2024-09-15 14:14:48 -0400] [2549] [INFO] Using worker: sync
+[2024-09-15 14:14:48 -0400] [2551] [INFO] Booting worker with pid: 2551
+[2024-09-15 14:14:48 -0400] [2552] [INFO] Booting worker with pid: 2552
+[2024-09-15 14:14:48 -0400] [2553] [INFO] Booting worker with pid: 2553
+[2024-09-20 07:43:41 -0400] [2552] [INFO] Worker exiting (pid: 2552)
+[2024-09-20 07:43:41 -0400] [2549] [INFO] Handling signal: term
+[2024-09-20 07:43:41 -0400] [2553] [INFO] Worker exiting (pid: 2553)
+[2024-09-20 07:43:41 -0400] [2551] [INFO] Worker exiting (pid: 2551)
+[2024-09-20 07:43:44 -0400] [2549] [INFO] Shutting down: Master
+[2024-09-20 08:18:52 -0400] [3453] [INFO] Starting gunicorn 21.2.0
+[2024-09-20 08:18:52 -0400] [3453] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (3453)
+[2024-09-20 08:18:52 -0400] [3453] [INFO] Using worker: sync
+[2024-09-20 08:18:52 -0400] [3454] [INFO] Booting worker with pid: 3454
+[2024-09-20 08:18:53 -0400] [3455] [INFO] Booting worker with pid: 3455
+[2024-09-20 08:18:53 -0400] [3456] [INFO] Booting worker with pid: 3456
+[2024-10-02 18:46:17 -0400] [3456] [INFO] Worker exiting (pid: 3456)
+[2024-10-02 18:46:17 -0400] [3453] [INFO] Handling signal: term
+[2024-10-02 18:46:17 -0400] [3454] [INFO] Worker exiting (pid: 3454)
+[2024-10-02 18:46:17 -0400] [3455] [INFO] Worker exiting (pid: 3455)
+[2024-10-02 18:46:17 -0400] [3453] [ERROR] Worker (pid:3456) was sent SIGTERM!
+[2024-10-02 18:46:17 -0400] [3453] [INFO] Shutting down: Master
+[2024-10-02 18:46:17 -0400] [509253] [INFO] Starting gunicorn 21.2.0
+[2024-10-02 18:46:17 -0400] [509253] [INFO] Listening at: unix:/var/www/abdeet/images/website/images.sock (509253)
+[2024-10-02 18:46:17 -0400] [509253] [INFO] Using worker: sync
+[2024-10-02 18:46:17 -0400] [509255] [INFO] Booting worker with pid: 509255
+[2024-10-02 18:46:17 -0400] [509256] [INFO] Booting worker with pid: 509256
+[2024-10-02 18:46:17 -0400] [509257] [INFO] Booting worker with pid: 509257

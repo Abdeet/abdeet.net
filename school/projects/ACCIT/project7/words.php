@@ -87,3 +87,4 @@ function updateStats(){
 		$_SESSION['stats']['totalGuessesOnIncorrectWords'] += $numGuesses;
 	}
 }
+?>
